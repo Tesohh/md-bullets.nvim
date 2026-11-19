@@ -59,7 +59,7 @@ that line; the moment it moves onto the text, the bullet comes back. Cursor
 moves do not invalidate the window on their own, so the plugin redraws the
 cursor line itself via `nvim__redraw` (Nvim 0.10+) on every move.
 
-Pairing with [md-indent.nvim](https://github.com/you/md-indent.nvim) works out
+Pairing with [md-indent.nvim](https://github.com/Tesohh/md-indent.nvim) works out
 of the box: that plugin owns indentation, this one only swaps the glyphs.
 
 ## Notes
