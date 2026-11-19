@@ -11,28 +11,16 @@ parser is required.
 
 ## Requirements
 
-- Neovim 0.7+
+- Neovim 0.12+ (for the built-in `vim.pack`)
 
 ## Installation
 
-With [lazy.nvim](https://github.com/folke/lazy.nvim):
+With the built-in `vim.pack` (Neovim 0.12+):
 
 ```lua
-{
-  "you/md-bullets.nvim",
-  ft = "markdown",
-  config = function()
-    require("md-bullets").setup()
-  end,
-}
-```
+vim.pack.add({ "https://github.com/Tesohh/md-bullets.nvim" })
 
-Or with packer.nvim:
-
-```lua
-use { "you/md-bullets.nvim", config = function()
-  require("md-bullets").setup()
-end }
+require("md-bullets").setup()
 ```
 
 ## Configuration
