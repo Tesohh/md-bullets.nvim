@@ -90,8 +90,11 @@ local function line_offset(bufnr, lnum)
   end
   local width = 0
   for _, mark in ipairs(marks) do
-    for _, chunk in ipairs(mark[4].virt_text or {}) do
-      width = width + vim.fn.strdisplaywidth(chunk[1])
+    -- only inline text shifts the line; marks at a window column do not
+    if mark[4].virt_text_pos == "inline" then
+      for _, chunk in ipairs(mark[4].virt_text or {}) do
+        width = width + vim.fn.strdisplaywidth(chunk[1])
+      end
     end
   end
   return width
